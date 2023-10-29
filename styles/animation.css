@@ -1,0 +1,69 @@
+.box {
+    margin: 0;
+    max-width: 600px;
+    &-parts {
+      &:nth-child(2) .text-parts:nth-child(1) {
+        letter-spacing: -0.05em;
+      }
+    }
+  }
+  .text {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    &:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: #fff;
+      position: absolute;
+      bottom: 0;
+      
+    }
+    &.is-animate {
+      &:after {
+        animation-name: line;
+        animation-duration: 0.75s;
+        animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+        animation-fill-mode: forwards;
+      }
+    }
+    &-parts {
+      display: inline-block;
+      transform: translateY(100%);
+      &.is-animate {
+        animation-name: slideUp;
+        animation-duration: 0.25s;
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+  @keyframes line {
+    0% {
+      left: -100%;
+    }
+    40% {
+      left: 0;
+    }
+    50% {
+      left: 0;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  @keyframes slideUp {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
