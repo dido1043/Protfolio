@@ -57,3 +57,39 @@ aside {
     text-decoration: none;
     color: white;
 }
+.second-section{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 30rem;
+}
+.second-section h2{
+    font-size: 50px;
+}
+.second-section>.skills ul li{
+    font-size: x-large;
+}
+.second-section  img{
+    width: 350px;
+}
+.second-section>.education p{
+    font-weight: bold;
+}
+
+.contacts{
+    margin-left: 1.5rem;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 25rem;
+}
+.contacts>.info h1{
+    font-size: 100px;
+    padding-bottom: 20rem;
+}
+.contacts>.info {
+    font-size: x-large;
+}
+.contacts img{
+    width: 600px;
+}
